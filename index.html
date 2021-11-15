@@ -22,7 +22,7 @@
                 <form>
                     <div class="mb-3">
                       <label for="hangmanWord" class="form-label"><strong>Set Hangman word:</strong></label>
-                      <input type="text" class="form-control" style="width:500px;" id="word">
+                      <input type="text" class="form-control" style="width:50%;" id="word">
                     </div>
                     <button type="button" class="btn btn-dark" onclick="buildStage()">Play!</button>
                   </form>
@@ -35,29 +35,29 @@
                 <div class="col">
                     <img src="./img/1.png" id="hang">
                 </div>
-                <div class="col-auto">
+                <div class="col" style="width:50%">
                     <div class="row wordPreview" id="wordPreview">
                         
                     </div>
-                    <div class="row align-items-end">
-                        <div class="col-auto">
+                    <div class="row">
+                        <div class="col" id="keyboard">
                             <br>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('q')">Q</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('w')">W</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('e')">E</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('r')">R</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('t')">T</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('y')">Y</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('u')">U</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('i')">I</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('o')">O</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('p')">P</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('q')" id="keyq">Q</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('w')" id="keyw">W</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('e')" id="keye">E</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('r')" id="keyr">R</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('t')" id="keyt">T</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('y')" id="keyy">Y</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('u')" id="keyu">U</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('i')" id="keyi">I</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('o')" id="keyo">O</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('p')" id="keyp">P</button>
                             <hr>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('a')">A</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('s')">S</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('d')">D</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('f')">F</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('g')">G</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('h')">H</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('j')">J</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('k')">K</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('l')">L</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('a')" id="keya">A</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('s')" id="keys">S</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('d')" id="keyd">D</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('f')" id="keyf">F</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('g')" id="keyg">G</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('h')" id="keyh">H</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('j')" id="keyj">J</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('k')" id="keyk">K</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('l')" id="keyl">L</button>
                             <hr>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('z')">Z</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('x')">X</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('c')">C</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('v')">V</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('b')">B</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('n')">N</button>
-                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('m')">M</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('z')" id="keyz">Z</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('x')" id="keyx">X</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('c')" id="keyc">C</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('v')" id="keyv">V</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('b')" id="keyb">B</button>&nbsp<button type="button" class="button-bg btn btn-dark" onclick="addLetter('n')" id="keyn">N</button>
+                            <button type="button" class="button-bg btn btn-dark" onclick="addLetter('m')" id="keym">M</button>
                         </div>
                     </div>
                 </div>
